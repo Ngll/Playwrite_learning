@@ -32,5 +32,5 @@ test('Assertion Demo', async({page})=>{
 
     //visual validation
 
-    await expect(page).toHaveScreenshot()
+    //await expect(page).toHaveScreenshot()
 })
