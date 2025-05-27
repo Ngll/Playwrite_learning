@@ -16,7 +16,7 @@ test ('Demo login test 2', async({page}) =>{
     await page.pause()
 })
 
-test.only('Demo login test 3', async({page}) =>{
+test('Demo login test 3', async({page}) =>{
     await page.pause()
     
 })
