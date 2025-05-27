@@ -3,7 +3,7 @@ import{test, expect} from '@playwright/test'
 test('selectors Demo', async({page})=>{
 
     await page.goto('https://www.saucedemo.com/')
-    await page.pause()
+    // await page.pause()
     //Using any object property
     await page.click('id=user-name')
     await page.locator('id=user-name').fill('edition')

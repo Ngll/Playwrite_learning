@@ -13,10 +13,10 @@ test('Demo login test', async({page}) =>{
 test ('Demo login test 2', async({page}) =>{
 
     await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
-    await page.pause()
+    // await page.pause()
 })
 
-test('Demo login test 3', async({page}) =>{
-    await page.pause()
+// test('Demo login test 3', async({page}) =>{
+//     await page.pause()
     
-})
+// })
