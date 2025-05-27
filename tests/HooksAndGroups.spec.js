@@ -14,9 +14,9 @@ test.beforeEach(async({page})=>{
 });
 
 //Page logout and close.
-test.afterAll(async({page})=>{
-    await page.close()
-});
+// test.afterAll(async({page})=>{
+//     await page.close()
+// });
 
 test('Homepage',async({page})=>{
     await page.goto('http://www.saucedemo.com/')
@@ -27,12 +27,12 @@ test('Homepage',async({page})=>{
     await page.locator('[data-test="login-button"]').click();
     await page.waitForURL('https://www.saucedemo.com/inventory.html');
 
-   
 });
 
 
 test('logout',async({page})=>{
     await page.getByRole('button', { name: 'Open Menu' }).click();
     await page.locator('[data-test="logout-sidebar-link"]').click();
-    await page.waitForURL('http://www.saucedemo.com/')
+    await page.waitForTimeout(3000);
+    await page.waitForURL('https://www.saucedemo.com/')
 });
