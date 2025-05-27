@@ -28,11 +28,17 @@ test('API test with headers and payload', async () => {
 });
 
 
-test('API GET Request', async({request})=>{
+test('API GET Request', async ({ request }) => {
+  // Directly use `request` which is already an APIRequestContext
+  const response = await request.get('https://reqres.in/api/users/2', {
+    headers: {
+      'Content-Type': 'application/json',
+      'x-api-key': 'reqres-free-v1'
+    }
+  });
 
-    const response = await request.get('https://reqres.in/api/users/2')
-    expect(response.status()).toBe(200);
-    const text = await response.text();
-    expect(text).toContain('Janet');
-    console.log(await response.json());
-})
+  expect(response.status()).toBe(200);
+  const body = await response.text();
+  expect(body).toContain('Janet');
+  console.log(await response.json());
+});
