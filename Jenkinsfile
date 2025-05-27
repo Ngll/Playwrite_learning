@@ -2,13 +2,13 @@ pipeline {
     agent any
 
     tools {
-        nodejs "NodeJS_16" // Adjust to your configured Node.js version
+        nodejs "NodeJS_23" // Adjust to your configured Node.js version
     }
 
     stages {
         stage('Clone Repo') {
             steps {
-                git 'https://github.com/your-user/your-repo.git'
+                git 'https://github.com/Ngll/Playwrite_learning.git'
             }
         }
 
