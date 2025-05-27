@@ -2,7 +2,6 @@ import {test, expect} from '@playwright/test'
 
 test('Demo login test', async({page}) =>{
     await page.goto('https://demo.applitools.com/')
-    await page.pause()
     await page.locator('[placeholder="Enter your username"]').fill('raghav')
     await page.locator('[placeholder="Enter your password"]').fill('raghav')
     await page.waitForSelector ('text=Sign in', {timeout:5000})
