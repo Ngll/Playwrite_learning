@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        nodejs "NodeJS_23" // Adjust to your configured Node.js version
+        nodejs "NodeJS_23" // Adjust to your configured Node.js version name
     }
 
     stages {
